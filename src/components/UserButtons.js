@@ -41,7 +41,7 @@ const UserButtons = () => {
       )}
       <Link className="cart-btn" to="/cart">
         <FaShoppingCart />
-        <span className={`cart-value ${total_items === 0 && 'hide'}`}>
+        <span className={`cart-value ${total_items > 0 && 'show'}`}>
           {total_items}
         </span>
       </Link>
@@ -90,13 +90,14 @@ const Wrapper = styled.div`
     background: var(--primary);
     color: var(--white);
     padding: 12px;
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
     justify-content: center;
     font-size: 0.75rem;
   }
-  .hide {
-    display: none;
+  .show {
+    display: flex;
   }
 
   .user {
