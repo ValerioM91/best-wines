@@ -14,6 +14,7 @@ import GridView from './GridView';
 import ListView from './ListView';
 import ProductGrid from './ProductGrid';
 import CartItem from './CartItem';
+import Seo from './SEO';
 
 export {
   Hero,
@@ -32,4 +33,5 @@ export {
   ListView,
   ProductGrid,
   CartItem,
+  Seo,
 };

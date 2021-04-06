@@ -68,6 +68,7 @@ const Wrapper = styled.section`
       width: 1.5rem;
       height: 1.5rem;
       border-radius: var(--radius);
+      border: 1px solid;
       outline: none;
     }
     .active {

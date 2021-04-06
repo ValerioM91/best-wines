@@ -6,6 +6,7 @@ import { useProductsContext } from '../context/products_context';
 import { useCartContext } from '../context/cart_context';
 import { useUserContext } from '../context/user_context';
 import { AmountButtons, Loading } from '../components';
+import { Seo } from '../components';
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -22,6 +23,7 @@ const SingleProduct = () => {
 
   useEffect(() => {
     fetchSingleProducts(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -30,6 +32,7 @@ const SingleProduct = () => {
         history.push('/');
       }, 3000);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [error]);
 
   if (productLoading || cartLoading || userLoading)
@@ -82,6 +85,7 @@ const SingleProduct = () => {
 
   return (
     <Wrapper className="section page-100">
+      <Seo title={name[0].toUpperCase() + name.slice(1)} />
       <div className="section-center">
         <Link to="/products" className="btn btn-small">
           Back to all products

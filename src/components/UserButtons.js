@@ -8,7 +8,6 @@ import { useUserContext } from '../context/user_context';
 const UserButtons = () => {
   const {
     cart: { total_items },
-    deleteCart,
   } = useCartContext();
   const { loginWithRedirect, loggedUser, logoutUser } = useUserContext();
   return (

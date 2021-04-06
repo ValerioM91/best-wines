@@ -1,7 +1,7 @@
 const links = [
   { name: 'Home', url: '/' },
-  { name: 'About', url: '/about' },
   { name: 'Products', url: '/products' },
+  { name: 'About', url: '/about' },
 ];
 
 export default links;
